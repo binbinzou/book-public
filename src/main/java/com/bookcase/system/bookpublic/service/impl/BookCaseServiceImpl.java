@@ -5,8 +5,6 @@ import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.bookcase.common.system.bookframework.returnresult.GeneralContentResult;
 import com.bookcase.common.system.bookframework.returnresult.GeneralPagingResult;
@@ -34,14 +32,12 @@ public class BookCaseServiceImpl implements BookCaseService {
 	}
 
 	@Override
-	@Transactional(propagation = Propagation.REQUIRED)
 	public GeneralContentResult<String> createBookCase(
 			BookCaseReqBody bookCaseReqBody) {
 		return null;
 	}
 
 	@Override
-	@Transactional(propagation = Propagation.REQUIRED)
 	public GeneralResult updateBookCase(String bookcaseId,
 			BookCaseReqBody bookCaseReqBody) {
 		return null;
